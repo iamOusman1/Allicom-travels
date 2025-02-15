@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allicom Travels</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="newscript.js" defer ></script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header2 navbar">
+            <div class="col-3">
+                <div class="logo">
+                    <img class="logo1" src="/img/Allicomtravels_logo.jpeg" alt="logo" width="10%">
+                <span class="allicom">Allicom Travels</span>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="menu">
+                    <ul class="nav-links">
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">VISA ASSISTANCE</a></li>
+                        <li><a href="#">STUDY ABROAD</a></li>
+                        <li><a href="#">SERVICES</a></li>
+                        <li><a href="#">CONTACT US</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <!-- nav bar -->
+            <img class="sidebar-menu" id="hamburger" src="/img/menu.png" alt="nav-toggle" width="10%" >
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+         
+
+        <div class="img-slider">
+            <div class="slides">
+                <!-- slide1 -->
+                <div class="slide">
+                    <img src="/img/allicomtravel_hotels.jpg" >
+                </div>
+                <!-- slide-2 -->
+                <div class="slide">
+                    <img src="/img/allicomtravels_flights.jpeg">
+                </div>
+                <!-- skide-3 -->
+                <div class="slide">
+                    <img src="/img/allicomtravels_lekki_beach.jpg">
+                </div>
+                <!-- slide-4 -->
+                <div class="slide">
+                    <img src="/img/british-airways-first-class-640x439.jpg">
+                </div>
+                <!-- slide-5 -->
+                <div class="slide">
+                    <img src="/img/dubai-front.jpeg">
+                </div>
+                <!-- slide-6 -->
+                <div class="slide">
+                    <img src="/img/Lagos-nationaltheatre.jpg">
+                </div>
+                <!-- slide-7 -->
+                <div class="slide">
+                    <img src="/img/royal-caribbean-cruise-Icon-of-the-seas-pool.png">
+                </div>
+
+                
+            </div>
+            <div class="dreams">
+                    <div class="title">
+                     <h2>Live the life of your Dream</h2>
+                    <h2 class="book-head">Explore any destination of your choice</h2>
+                    </div>
+                    <center>
+                        <button class="btn">Book now</button>
+                    </center>
+                 </div>
+        </div>
+
+       
+    </div>
+
+    <!-- plan trip -->
+    <div class="container">
+        <div class="parent">
+            <h2 class="head1">Plan Your Next Trip</h2>
+            <p class="par-1">We cover the entire trip; flight ticket, hotel, visa, transfer and insurance</p>
+
+            <!-- <div id="booking-tabs">
+                <button class="tab-button active" data-tab="one-way">One Way</button>
+                <button class="tab-button" data-tab="multi-city">Multi-City</button>
+            </div> -->
+
+            <div id="flightForm">
+               <div id="one-way-form" class="tab-content active">
+                <form id="oneWayForm">
+                    <div class="tabs">
+                        <button class="active-tab">Flight Ticket</button>
+                        <button class="tab1">Tours/Sightseeing</button>
+                        <button class="tab1">Hotels</button>
+                        <button class="tab1">Transfer/Car hire</button>
+                    </div>
+                    <select class="trip-type city" name="Trip type" required>
+                        <option value disabled="disabled" selected="selected">Trip type</option>
+                        <option value="one-way">One way</option>
+                        <option value="one-way">Return</option>
+                        <option value="multi-city">Multi-city</option>
+                    </select>
+                    <select class="city" name="Class" required>
+                        <option value disabled="disabled" selected="selected">Class</option>
+                        <option>Economy Class</option>
+                        <option>Premium Class</option>
+                        <option>Business Class</option>
+                        <option>First Class</option>
+                    </select>
+                    <input class="city" id="departure-city" type="text" placeholder="Departure City">
+                    <input class="city" id="arrival-city" type="text" placeholder="Arrival City">
+                    <input class="city" id="departure-date" type="date" >
+                    <input class="city" id="arrival-date" type="date" >
+
+                    <input class="cit" id="adult-no" type="text" placeholder="Adult No">
+                    <input class="cit" id="child-no" type="text" placeholder="Child No">
+                    <input class="cit" id="infant-no" type="text" placeholder="Infant">
+                    <select class="services"  id="services">
+                    <option value disabled="disabled" selected="selected">Services</option>
+                    <option>Flight ticket only</option>
+                    <option>Flight ticket and hotel</option>
+                    <option>Visa, flight & hotel</option>
+                    <option>Vacation package</option>
+                    <option>Insurance only</option>
+                    </select>
+                <!-- <p>Departure Date</p> -->
+                    <input class="city" id="fullname" type="text" placeholder="Fullname">
+
+                    <input class="city" id="email" type="text" placeholder="Email">
+                <!-- <p>Departure Date</p> -->
+                    <input class="city" id="mobile-no" type="text" placeholder="Mobile No"><br>
+                
+                    <button class="btn" id="search-flight">Search</button>
+                </form>
+               </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- Multi city booking -->
+    <div id="multi-city-form" class="tab-content"> 
+            <form id="multiCityForm">
+                <div id="flightContainer">
+                <div class="flight-details">
+                    <select class="trip-type city"  name="Trip type" required>
+                        <option value disabled="disabled" selected="selected">Trip type</option>
+                        <option value="one-way">One way</option>
+                        <option>Return</option>
+                        <option value="multi-city">Multi-city</option>
+                        </select>
+                        <h3>Flight 1</h3>
+                        <input class="departure-city-1" id="departure-city-1" type="text" placeholder="Departure City">
+                        <input class="arrival-city-1" id="arrival-city-1" type="text" placeholder="Arrival City">
+                        <input class="departure-date-1" id="departure-date-1" type="date" >
+                </div>
+                </div>
+                <center>
+                    <button class="btn2" id="add-flight-btn">Add Flight</button>
+                    <button type="submit" class="btn2" id="search-flight">Search</button>
+                </center>
+            </form>
+    </div>
+
+    <div id="result" class="result-container"></div>
+    <div class="modal" id="modal"></div>
+
+
+<div id="noDisplay">
+    <div class="container" >
+        <div class="parent2">
+            <h1 class="welcome-head">Welcome To Allicom Travels</h1>
+            <p class="welcome">A complete travels and tours solution across the world offerings free visa advisory and consultation, best deal for airlines flight ticket booking, hotel bookings, cruise booking and tours.
+                We are incorporated as a limited liability company and approved by Civil Aviation Authority (CAA) and International Air Transport Association. (IATA)
+                Our passion is traveling! We believe in providing a personal touch beyond just making reservations. All our agents have traveled extensively and have first-hand knowledge of the destinations we book for. "We’re in the business of making all our clients feel served by selling solution and comfort rather than making reservations."<br><br>
+                
+                We specialize in providing each customer with a wide array of travel packages and services. Whether you’re looking for airline flight ticket booking, hotel reservation, tour packages, cruise booking, beach break or theme park excursion, chauffeur car ride, study abroad, and insurance services.  we can help you put together a vacation you’ll never forget. We are committed to service and excellence, and we’ll take care of all the details so you can start relaxing long before your next trip. 
+                Contact us today to learn more about our offerings.</p>
+        </div>
+    </div>
+
+    <div class="con-container">
+        <h1 class="service">Our Services</h1>
+        <div class="parent3 column">
+            <div class="col-3">
+                <img class="img" src="/img/google-flights-1.jpeg" alt="flight" width="75%">
+                <h2>Airline Flight Ticket</h2>
+                <p class="our-services">We offer affordable flight booking and ticket to many cities in all countries across the globe and in all categories; one-way ticket, return ticket, multiple cities flight ticket, SOTO ticket, and marine fare.</p>
+                <button class="btn3">Book Now</button>
+            </div>
+            <div class="col-3">
+                <img class="img" src="/img/eko-gardens.jpg" alt="flight" width="80%">
+                <h2>Hotel Bookings</h2>
+                <p class="our-services">When it comes to booking the perfect hotel, vacation rental, resort, apartment, guest house, we have got you covered. With hundreds of thousands of properties in over 200 countries and territories, we provide incomparable choice with best deal and price guarantee.</p>
+                <button class="btn3">Book Now</button>
+            </div>
+            <div class="col-3">
+                <img class="img" src="/img/tour-guide-rules.jpg" alt="flight" width="80%">
+                <h2>Tour Guide</h2>
+                <p class="our-services">We are passionate about travel. Every day we inspire and reach many travelers for honeymoon, leisure, vacation, group tour and hangout. We designs ready-made packages and tailor-made package on request that will exceed your expectations.</p>
+                <button class="btn3">Book Now</button>
+            </div>
+        </div>
+
+
+
+        <div class="parent3 column">
+            <div class="col-3">
+                <img class="img" src="/img/International-Education-Study-Consult-Ltd-Visa-Assistance-2.jpg" alt="flight" width="80%">
+                <h2>Visa Assistance</h2>
+                <p class="our-services">As one of our popular services, no matter what type of travel you need to plan, rest assured that we will provide all the resource and guidance you need for perfect visa arrangement in order to get authentic approved visa. We also offer 48 hours Dubai visa. (UAE visa)</p>
+                <button class="btn3">Book Now</button>
+            </div>
+            <div class="col-3">
+                <img class="img" src="/img/car-hire.jpg" alt="flight" width="80%">
+                <h2>Car Hire</h2>
+                <p class="our-services">Whether you're going on a wedding ceremony or any kinds of occasion, city break or a beach holiday, hiring a car from Allicom travels will add a sense of adventure to your trip.
+
+                    Get in touch with us today for study abroad proper arrangement.</p>
+                    <button class="btn3">Book Now</button>
+            </div>
+            <div class="col-3">
+                <img class="img" src="/img/smiling-black-man-holding-laptop-and-flag-of-uk-1024x682.jpg" alt="flight" width="80%">
+                <h2>Study Abroad</h2>
+                <p class="our-services">Let handling your foreign educational program is one of our area of expert. Everything in one package; advisory, searching school, admission, visa documentation, accommodation and travel arrangement to school door step</p>
+                <button class="btn3">Book Now</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="con-parent">
+            
+            <div class="parent4">
+                <div class="col-3"></div>
+                <div class="col-3"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="con-head">Contact Us</h1>
+            <p class="con-par">We reach you easily no matter where you are iin the world</p>
+        <div class="download-parent column">
+            <div class="col-1">
+                <div class="download-img1">
+                   <h3>Office:</h3>
+                   <p class="c-par">Head Office: <span class="c-par1">
+                    61 Okesuna Street, Lagos Island, 102273, Lagos, Nigeria</span></p>
+
+                   <p class="c-par">Office Address: <span class="c-par1">
+                    190 Broad Street, Lagos Island, 102273, Lagos, Nigeria.</span></p>
+
+                   <h3 class="c-head"> Contact</h3>
+                   <p class="c-par1-1">08067663986</p>
+                   <p class="c-par1">08071729330</p>
+                </div>
+            </div> 
+            <div class="col-1 form">
+                <div>
+                    <h3 class="d-head1">Get In Touch</h3>
+                    <form>
+                       <div class="input-details centerm">
+                        <input class="d-input" type="text" name="name" placeholder="Name">
+
+                        <input class="d-input" type="text" name="name" placeholder="Email"> <br>
+                       </div>
+
+                       <div class="input-details centerm">
+                        <input class="d-input" type="text" name="name" placeholder="Phone">
+
+                        <input class="d-input" type="text" name="name" placeholder="Location"> <br>
+                       </div>
+
+                       <div class="">
+                        <textarea class="textarea">Message</textarea>
+                       </div>
+                       <div class="d-btn1">
+                        <button class="d-btn">Send</button>
+                       </div>
+                       
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="footer">
+            <div class="download-parent column">
+                <div class="col-3 linksss">
+                    <h2 >Quick Links</h2>
+                    <li class="links">Travels Update</li>
+                    <li class="links">Visa Assistance</li>
+                    <li class="links">Tours Packages</li>
+                    <li class="links">Study Abroads</li>
+                    <li class="links">Insurance Services</li>
+                    <li class="links">hajj & Umrah</li>
+                    <li class="links">About Us</li>
+                </div>
+                <div class="col-3 linksss2">
+                    <h2 class="link-head">Get In Touch</h2>
+                    <p class="links">08067663986,
+                        08071729330</p>
+                     <p class="links">hello@allicomtravel.com</p>
+                     <p class="links"> 61 Okesuna Street, Lagos Island, 102273, Lagos, Nigeria</p>
+                    
+                        <img class="facebook" src="/img/facebook (1).png" alt="" width="5%">
+                        <img class="facebook" src="/img/instagram (1).png" alt="" width="5%">
+                        <img class="facebook" src="/img/twitter (1).png" alt="" width="5%">
+                        <img class="facebook" src="/img/social.png" alt="" width="5%">
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>   
+</body>
+</html>
+
+
+
+<!-- <div class="header">
+            <div class="col-3 cont">
+                <div class="phone">
+                    <h4>08067663986, <span>08071729330</span></h4>
+                </div>
+                <div class="email">
+                   <h4> hello@allicomtravels.com</h4>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="socials">
+                        <img class="facebook" src="/img/facebook (1).png" alt="facebook" width="5%">
+                    
+                        <img class="facebook" src="/img/twitter (1).png" alt="facebook" width="5%">
+                    
+                        <img class="facebook" src="/img/instagram (1).png" alt="facebook" width="5%">
+
+                        <img class="facebook" src="/img/social.png" alt="facebook" width="5%">
+
+                        <img class="facebook" src="/img/social (1).png" alt="facebook" width="5%">
+                
+                    
+                </div>
+            </div>
+        </div> -->
