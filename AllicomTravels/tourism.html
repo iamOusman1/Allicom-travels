@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/tour.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header2 navbar">
+            <div class="col-3">
+                <div class="logo">
+                    <img class="logo1" src="/img/Allicomtravels_logo.jpeg" alt="logo" width="10%">
+                <span class="allicom">Allicom Travels</span>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="menu">
+                    <ul class="nav-links">
+                        <li><a href="#">HOME</a></li>
+                        <!-- <li><a href="#">VISA ASSISTANCE</a></li>
+                        <li><a href="#">STUDY ABROAD</a></li> -->
+                        <li><a href="#">SERVICES</a></li>
+                        <li><a href="#">CONTACT US</a></li>
+                    </ul>
+                </div>
+            </div>
+
+             <!-- nav bar -->
+             <img class="sidebar-menu" id="hamburger" src="/img/menu.png" alt="nav-toggle" width="10%" >
+             <div class="hamburger">
+                 <span></span>
+                 <span></span>
+                 <span></span>
+             </div>
+         </div>
+
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="tour-parent">
+            <form1>
+               <div class="form-inputs">
+                <select class="tour-inp" id="city">
+                    <option value disabled="disabled" selected="selected">Destination</option>
+                    <option>Abuja</option>
+                    <option>Asaba</option>
+                    <option>Ekiti</option>
+                    <option>Lagos</option>
+                    <option>Ibadan</option>
+                    <option>Ogun</option>
+                    <option>Osun</option>
+                    <option>Ondo</option>
+                    <option>Port Hacourt</option>
+                    <option>Uyo</option>
+                    <option>Benin Republic</option>
+                    <option>Ghana</option>
+                    <option>Togo</option>
+                    <option>Senegal</option>
+                    <option>Cape verde</option>
+                    <option>Kigali, Rwanda</option>
+                    <option>Nairobi, Kenya</option>
+                    <option>Mombasa, Kenya</option>
+                    <option>Dar Salam, Tanzania</option>
+                    <option>Zanzibar, Tanzania</option>
+                </select>
+                <input class="tour-inp" id="date" type="date" >
+                <center><button class="tour-btn" onclick="searchTourism()">Search</button></center>
+               </div>
+            </form1>
+        </div>
+    </div>
+
+    <!-- <h3>Available Tourism Site</h3> -->
+    <div class="results"></div>
+
+    <div class="tour-package">
+        <h1>Tour Package</h1><br>
+        <p>We are passionate about travel. Every day we inspire and reach many travelers for honeymoon, leisure, vacation, group tour and hangout.
+         We designs ready-made packages and tailor-made package on request that will exceed your expectations. Our deals help customers save money and time, so they can focus on having fun.</p>
+    </div>
+
+    <div class="container">
+        <h1 class="deals">Best Deals</h1>
+        <div class="tour-parent1 column">
+            <div class="package1">
+                <h3>Mauritus Island</h3>
+                <img src="/img/allicomtravels-mauritius-tour-packages.jpg" alt="" width="100%">
+                <h5>Solo Traveler <span>NGN 879,999</span></h5>
+                <h5>Couple <span>NGN 1,200,000</span></h5><br>
+                <p>- Tourist entry permit</p>
+                <p>- Return airport pick-up</p>
+                <p>- 7 days in 3 stars hotel</p>
+                <p>- Daily breakfast</p>
+                <p>- North Island Tour</p>
+                <p>- South Island Tour</p>
+                <p>- Not include flight, start from N1.4m</p>
+                <center><button>Book Now</button></center>
+            </div>
+            <div class="package1">
+                <h3>Vacation in Seychelles</h3>
+                <img src="/img/berjaya-beach-resort-pool.jpg" alt="" width="100%">
+                <h5>Solo Traveler <span>NGN 1,199,999</span></h5>
+                <h5>2 persons <span>NGN 1,349,999</span></h5><br>
+                <p>- Tourist entry permit</p>
+                <p>- Return airport pick-up</p>
+                <p>- 6 nights 7 days in beach resort</p>
+                <p>- Daily breakfast</p>
+                <p>- Not include flight, start from N1.1m</p>
+                <center><button>Book Now</button></center>
+            </div>
+            <div class="package1">
+                <h3>Romantic Maldives</h3>
+                <img src="/img/maldives.jpg" alt="" width="100%">
+                <h5>Solo Traveler <span>NGN 879,999</span></h5>
+                <h5>Couple <span>NGN 1,200,000</span></h5><br>
+                <p>- Tourist entry permit</p>
+                <p>- Return airport pick-up</p>
+                <p>- 6 nights 7 days in a beach hotel</p>
+                <p>- Daily breakfast</p>
+                <p>- Not include flight, start from N2.2m</p>
+                <center><button>Book Now</button></center>
+            </div>
+        </div>
+
+        <div class="tour-parent1 column">
+            <div class="package1">
+                <h3>Vacation in Mombasa</h3>
+                <img src="/img/pexels-keeganjchecks-30165022.jpg" alt="" width="100%">
+                <h5>Solo Traveler <span>NGN 1,490,000</span></h5>
+                <h5>Couple <span>NGN 1,800,000</span></h5><br>
+                <p>- Tourist entry permit</p>
+                <p>- Return airport pick-up</p>
+                <p>- 7 days accommodationat at a resort</p>
+                <p>- Daily breakfast</p>
+                <p>- Mombasa city tour</p>
+                <p>- Not include flight, start from N1.5m</p>
+                <center><button>Book Now</button></center>
+            </div>
+            <div class="package1">
+                <h3>Vacation in Zanzibar</h3>
+                <img src="/img/pexels-royal-wave-ent-781256594-20693411.jpg" alt="" width="100%">
+                <h5>Solo Traveler <span>NGN 1,520,999</span></h5>
+                <h5>2 persons <span>NGN 1,995,000</span></h5><br>
+                <p>- Tourist entry permit</p>
+                <p>- Return airport pick-up</p>
+                <p>- 7 days accommodation at a beach hotel</p>
+                <p>- Daily breakfast</p>
+                <p>- City and shopping tour</p>
+                <p>- Not include flight, start from N1.5m</p>
+                <center><button>Book Now</button></center>
+            </div>
+            <div class="package1">
+                <h3>Best of Mauritus</h3>
+                <img src="/img/mauritus.jpg" alt="" width="100%">
+                <h5>Solo Traveler <span>NGN 1,499,999</span></h5>
+                <h5>Couple <span>NGN 2,600,000</span></h5><br>
+                <p>- Tourist entry permit</p>
+                <p>- Return airport pick-up</p>
+                <p>- 7 days in 3 stars hotel</p>
+                <p>- Daily breakfast</p>
+                <p>- North Island Tour</p>
+                <p>- South Island Tour</p>
+                <p>- Not include flight, start from N2.2m</p>
+                <center><button>Book Now</button></center>
+            </div>
+        </div>
+
+
+        <div class="tour-parent1 column">
+            <div class="package1">
+                <h3>Best of Singapore City</h3>
+                <img src="/img/singapore.jpg" alt="" width="100%">
+                <h5>Solo Traveler <span>NGN 1,600,000</span></h5>
+                <h5>P.Sharing <span>NGN 1,449,999</span></h5><br>
+                <p>- Return airport pick-up</p>
+                <p>- 5 nights in 3 star hotel</p>
+                <p>- Daily breakfast</p>
+                <p>- Singapore city tour</p>
+                <p>- Santosa Island tour</p>
+                <p>- And entertainment etc.</p>
+                <p>- Not include flight, start from N2.8m</p>
+                <center><button>Book Now</button></center>
+            </div>
+            <div class="package1">
+                <h3>Vienna, Austria City Break</h3>
+                <img src="/img/austria.jpg" alt="" width="100%">
+                <h5>Solo Traveler <span>NGN 0.00</span></h5>
+                <h5>2 persons <span>NGN 0.00</span></h5><br>
+                <p>Coming Soon!!!</p>
+                <center><button>Book Now</button></center>
+            </div>
+            <div class="package1">
+                <h3>Minsk, Belarus City Break</h3>
+                <img src="/img/belerus.jpg" alt="" width="100%">
+                <h5>Solo Traveler <span>NGN 0.00</span></h5>
+                <h5>Couple <span>NGN 0.00</span></h5><br>
+                <p>- Coming Soon!!!</p>
+                <center><button>Book Now</button></center>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <h1 class="con-head">Contact Us</h1>
+            <p class="con-par">We reach you easily no matter where you are iin the world</p>
+        <div class="download-parent column">
+            <div class="col-1">
+                <div class="download-img1">
+                   <h3>Office:</h3>
+                   <p class="c-par">Head Office: <span class="c-par1">
+                    61 Okesuna Street, Lagos Island, 102273, Lagos, Nigeria</span></p>
+
+                   <p class="c-par">Office Address: <span class="c-par1">
+                    190 Broad Street, Lagos Island, 102273, Lagos, Nigeria.</span></p>
+
+                   <h3 class="c-head"> Contact</h3>
+                   <p class="c-par1-1">08067663986</p>
+                   <p class="c-par1">08071729330</p>
+                </div>
+            </div> 
+            <div class="col-1 form">
+                <div>
+                    <h3 class="d-head1">Get In Touch</h3>
+                    <form>
+                       <div class="input-details centerm">
+                        <input class="d-input" type="text" name="name" placeholder="Name">
+
+                        <input class="d-input" type="text" name="name" placeholder="Email"> <br>
+                       </div>
+
+                       <div class="input-details centerm">
+                        <input class="d-input" type="text" name="name" placeholder="Phone">
+
+                        <input class="d-input" type="text" name="name" placeholder="Location"> <br>
+                       </div>
+
+                       <div class="">
+                        <textarea class="textarea">Message</textarea>
+                       </div>
+                       <div class="d-btn1">
+                        <button class="d-btn">Send</button>
+                       </div>
+                       
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="footer">
+            <div class="download-parent column">
+                <div class="col-3 linksss">
+                    <h2 >Quick Links</h2>
+                    <li class="links">Travels Update</li>
+                    <li class="links">Visa Assistance</li>
+                    <li class="links">Tours Packages</li>
+                    <li class="links">Study Abroads</li>
+                    <li class="links">Insurance Services</li>
+                    <li class="links">hajj & Umrah</li>
+                    <li class="links">About Us</li>
+                </div>
+                <div class="col-3 linksss2">
+                    <h2 class="link-head">Get In Touch</h2>
+                    <p class="links">08067663986,
+                        08071729330</p>
+                     <p class="links">hello@allicomtravel.com</p>
+                     <p class="links"> 61 Okesuna Street, Lagos Island, 102273, Lagos, Nigeria</p>
+                    
+                        <img class="facebook" src="/img/facebook (1).png" alt="" width="5%">
+                        <img class="facebook" src="/img/instagram (1).png" alt="" width="5%">
+                        <img class="facebook" src="/img/twitter (1).png" alt="" width="5%">
+                        <img class="facebook" src="/img/social.png" alt="" width="5%">
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+    
+</body>
+</html>
