@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/file.js" defer></script>
+</head>
+<body>
+
+    <div class="header">
+        <div class="col-3 cont">
+            <div class="phone">
+                <h4>08067663986, <span>08071729330</span></h4>
+            </div>
+            <div class="email">
+               <h4> hello@allicomtravels.com</h4>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="socials">
+                    <img class="facebook" src="/img/facebook (1).png" alt="facebook" width="5%">
+                
+                    <img class="facebook" src="/img/twitter (1).png" alt="facebook" width="5%">
+                
+                    <img class="facebook" src="/img/instagram (1).png" alt="facebook" width="5%">
+
+                    <img class="facebook" src="/img/social.png" alt="facebook" width="5%">
+
+                    <img class="facebook" src="/img/social (1).png" alt="facebook" width="5%">
+            
+                
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="container">
+    <div class="parent-header">
+                <div class="col-3">
+                    <div class="logo">
+                        <img class="logo1" src="/img/Allicomtravels_logo.jpeg" alt="logo" width="10%">
+                    <span class="allicom">Allicom Tourism</span>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="menu">
+                        <ul class="nav-links">
+                            <li><a href="#">HOME</a></li>
+                            <!-- <li><a href="#">VISA ASSISTANCE</a></li>
+                            <li><a href="#">STUDY ABROAD</a></li> -->
+                            <li><a href="#">SERVICES</a></li>
+                            <li><a href="#">CONTACT US</a></li>
+                            <!-- <li><a href="/signup.html">SIGN UP</a></li> -->
+                        </ul>
+                    </div>
+                    
+                </div>
+                <!-- nav bar -->
+                <img class="sidebar-menu" id="hamburger" src="/img/menu.png" alt="nav-toggle" width="10%" >
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="parent-tourism">
+        <h1>PRODUCTS & SERVICES SUPPLIER PORTAL</h1>
+        <p class="tourism-par">Welcome to Allicom tourism, the largest African tourism platform for suppliers to integrate their products and services.</p><br>
+        <p class="tourism-par1">As a tour operator, car hire company, or hotel property owner with a large inventory, it is not always easy to source potential customers and increase sales. At Allicom Tourism, we can help you tap into a new audience and establish a solid agent-customer base, whether you supply sightseeing tours, transfers, or hotels/restaurants. We'll enable you to expand your business by reaching out to travel agents and the general public, increasing your visibility to thousands of agents internationally.
+
+        Register with us today to reach potential customers for your business.</p>
+        <button class="sup-btn">Tour operator</button>
+        <button class="sup-btn">Hotel Property</button>
+        <button class="sup-btn">Car Hire Company</button>
+        <button class="sup-btn">Restaurant</button>
+        <button class="sup-btn">Event</button>
+    </div>
+</div>
+
+<div class="tour-operator">
+    <h1>Tour Operator Service</h1>
+    <form id="tourUpload">
+        <p>City:</p>
+        <input id="city" class="tour-inp2" type="text" name="city">
+        <p>Country:</p>
+        <input id="country" class="tour-inp2" type="text" name="country">
+        <p>Tour Title:</p>
+        <input id="title" class="tour-inp2" type="text" name="title">
+        <p>Tour Description:</p>
+        <textarea id="desc" class="tour-area"></textarea>
+        <p>Duration of Tour:</p>
+        <input id="duration" class="tour-inp2" type="number" name="duration">
+        <p>Price:</p>
+        <input id="price" class="tour-inp2" type="number" name="price">
+        <p>Age Range:</p>
+        <input id="ageLimit" class="tour-inp2" type="number" name="age">
+        <!-- <div id="ageLimit">
+            <input id="minAge" class="tour-inp3" type="number" name="minAge" placeholder="Min Age">
+            <input id="maxAge" class="tour-inp3" type="number" name="maxAge" placeholder="Max Age">
+        </div> -->
+        <p>Available Days</p>
+        <input value="Monday" data-day="Monday" class="tour-radio" type="checkbox" name="day" ><span class="days">Monday</span>
+        <input value="Tuesday" data-day="Tuesday" class="tour-radio" type="checkbox" name="day"><span class="days">Tuesday</span>
+        <input value="Wednesday" data-day="Wednesday" class="tour-radio" type="checkbox" name="day"><span class="days">Wednesday</span>
+        <input value="Thursday" data-day="Thursday" class="tour-radio" type="checkbox" name="day" ><span class="days">Thursday</span>
+        <input value="Friday" data-day="Friday" class="tour-radio" type="checkbox" name="day" ><span class="days">Friday</span>
+        <input value="Saturday" data-day="Saturday" class="tour-radio" type="checkbox" name="day"><span class="days">Saturday</span>
+        <input value="Sunday" data-day="Sunday" class="tour-radio" type="checkbox" name="day" ><span class="days">Sunday</span>
+        
+
+        <p>Images (Max 4)</p>
+        <input id="selectedImage" class="tour-file" type="file">
+        <div><button class="preview-btn">Preview</button></div>
+        <button class="submitBtn" id="submitBtn" type="submit" disabled>Submit</button>
+    </form>
+
+
+    <div class="overlay"></div>
+
+    <!-- Preview Section -->
+    <div class="preview-section" >
+        <h1>Preview</h1>
+        <p>City: <span id="preview-city"></span></p>
+        <p>Country: <span id="preview-country"></span></p>
+        <p>Tour Title: <span id="preview-title"></span></p>
+        <p>Description: <span id="preview-desc"></span></p>
+        <p>Price: <span id="preview-price"></span></p>
+        <!-- <p>Age Range: <span id="preview-minAge"></span> - <span id="preview-maxAge"></span></p> -->
+        <p>Age Range: <span id="preview-ageLimit">
+        <p>Duration: <span id="preview-duration"></span></p>
+        <p>Available Days: <span id="preview-available-days"></span></p>
+        <p>Selected Images: <span id="preview-images"></span></p>
+        
+     </div>
+</div>
+
+    
+</body>
+</html>

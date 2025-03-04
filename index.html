@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Allicom Travels</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer ></script>
+    <script src="/tour.js" defer></script>
 </head>
 <body>
 
@@ -21,181 +21,192 @@
                 <div class="menu">
                     <ul class="nav-links">
                         <li><a href="#">HOME</a></li>
-                        <li><a href="#">VISA ASSISTANCE</a></li>
-                        <li><a href="#">STUDY ABROAD</a></li>
+                        <!-- <li><a href="#">VISA ASSISTANCE</a></li>
+                        <li><a href="#">STUDY ABROAD</a></li> -->
                         <li><a href="#">SERVICES</a></li>
                         <li><a href="#">CONTACT US</a></li>
                     </ul>
                 </div>
-                
             </div>
-            <!-- nav bar -->
-            <img class="sidebar-menu" id="hamburger" src="/img/menu.png" alt="nav-toggle" width="10%" >
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+
+             <!-- nav bar -->
+             <img class="sidebar-menu" id="hamburger" src="/img/menu.png" alt="nav-toggle" width="10%" >
+             <div class="hamburger">
+                 <span></span>
+                 <span></span>
+                 <span></span>
+             </div>
+         </div>
+
         </div>
-
-         
-
-        <div class="img-slider">
-            <div class="slides">
-                <!-- slide1 -->
-                <div class="slide">
-                    <img src="/img/allicomtravel_hotels.jpg" >
-                </div>
-                <!-- slide-2 -->
-                <div class="slide">
-                    <img src="/img/allicomtravels_flights.jpeg">
-                </div>
-                <!-- skide-3 -->
-                <div class="slide">
-                    <img src="/img/allicomtravels_lekki_beach.jpg">
-                </div>
-                <!-- slide-4 -->
-                <div class="slide">
-                    <img src="/img/british-airways-first-class-640x439.jpg">
-                </div>
-                <!-- slide-5 -->
-                <div class="slide">
-                    <img src="/img/dubai-front.jpeg">
-                </div>
-                <!-- slide-6 -->
-                <div class="slide">
-                    <img src="/img/Lagos-nationaltheatre.jpg">
-                </div>
-                <!-- slide-7 -->
-                <div class="slide">
-                    <img src="/img/royal-caribbean-cruise-Icon-of-the-seas-pool.png">
-                </div>
-
-                
-            </div>
-            <div class="dreams">
-                    <div class="title">
-                     <h2>Live the life of your Dream</h2>
-                    <h2 class="book-head">Explore any destination of your choice</h2>
-                    </div>
-                    <center>
-                        <button class="btn">Book now</button>
-                    </center>
-                 </div>
-        </div>
-
-       
     </div>
 
-    <!-- plan trip -->
-    <div class="container">
-        <div class="parent">
-            <h2 class="head1">Plan Your Next Trip</h2>
-            <p class="par-1">We cover the entire trip; flight ticket, hotel, visa, transfer and insurance</p>
-            <form>
-                <input class="city" type="text" placeholder="Departure City">
-                <!-- <p>Departure Date</p> -->
-                <input class="city" type="text" placeholder="Arrival City">
-                <input class="city" type="datetime-local" >
-                <!-- <p>Departure Date</p> -->
-                <input class="city" type="datetime-local" >
 
-                <input class="cit" type="text" placeholder="Adult No">
-                <!-- <p>Departure Date</p> -->
-                <input class="cit" type="text" placeholder="Child No">
-                <select class="services">
-                    <label>Service</label>
-                <option>Flight ticket only</option>
-                <option>Flight ticket and hotel</option>
-                <option>Visa, flight & hotel</option>
-                <option>Vacation package</option>
-                <option>Insurance only</option>
+    <div class="container">
+        <div class="tour-parent">
+            <form1>
+               <div class="form-inputs">
+                <select class="tour-inp" id="searchInput">
+                    <option value disabled="disabled" selected="selected">Destination</option>
+                    <option>Abuja</option>
+                    <option>Asaba</option>
+                    <option>Ekiti</option>
+                    <option>Lagos</option>
+                    <option>Ibadan</option>
+                    <option>Ogun</option>
+                    <option>Osun</option>
+                    <option>Ondo</option>
+                    <option>Port Hacourt</option>
+                    <option>Uyo</option>
+                    <option>Benin Republic</option>
+                    <option>Ghana</option>
+                    <option>Togo</option>
+                    <option>Senegal</option>
+                    <option>Cape verde</option>
+                    <option>Kigali, Rwanda</option>
+                    <option>Nairobi, Kenya</option>
+                    <option>Mombasa, Kenya</option>
+                    <option>Dar Salam, Tanzania</option>
+                    <option>Zanzibar, Tanzania</option>
                 </select>
-
-                <input class="city" type="text" placeholder="Departure City">
-                <!-- <p>Departure Date</p> -->
-                <input class="city" type="text" placeholder="Fullname">
-
-                <input class="city" type="text" placeholder="Email">
-                <!-- <p>Departure Date</p> -->
-                <input class="city" type="text" placeholder="Mobile">
-                
-                <button class="btn2">Search</button>
-                
-            </form>
+                <input class="tour-inp" id="date" type="date" >
+                <center><button class="tour-btn" id="searchTour" onclick="searchTourism()">Search</button></center>
+               </div>
+            </form1>
         </div>
+    </div>
+
+    <!-- <h3>Available Tourism Site</h3> -->
+    <div class="results" id="results"></div>
+
+   <div id="noDisplay">
+    <div class="tour-package">
+        <h1>Tour Package</h1><br>
+        <p>We are passionate about travel. Every day we inspire and reach many travelers for honeymoon, leisure, vacation, group tour and hangout.
+         We designs ready-made packages and tailor-made package on request that will exceed your expectations. Our deals help customers save money and time, so they can focus on having fun.</p>
     </div>
 
     <div class="container">
-        <div class="parent2">
-            <h1 class="welcome-head">Welcome To Allicom Travels</h1>
-            <p class="welcome">A complete travels and tours solution across the world offerings free visa advisory and consultation, best deal for airlines flight ticket booking, hotel bookings, cruise booking and tours.
-                We are incorporated as a limited liability company and approved by Civil Aviation Authority (CAA) and International Air Transport Association. (IATA)
-                Our passion is traveling! We believe in providing a personal touch beyond just making reservations. All our agents have traveled extensively and have first-hand knowledge of the destinations we book for. "We’re in the business of making all our clients feel served by selling solution and comfort rather than making reservations."<br><br>
-                
-                We specialize in providing each customer with a wide array of travel packages and services. Whether you’re looking for airline flight ticket booking, hotel reservation, tour packages, cruise booking, beach break or theme park excursion, chauffeur car ride, study abroad, and insurance services.  we can help you put together a vacation you’ll never forget. We are committed to service and excellence, and we’ll take care of all the details so you can start relaxing long before your next trip. 
-                Contact us today to learn more about our offerings.</p>
+        <h1 class="deals">Best Deals</h1>
+        <div class="tour-parent1 column">
+            <div class="package1">
+                <h3>Mauritus Island</h3>
+                <img src="/img/allicomtravels-mauritius-tour-packages.jpg" alt="" width="100%">
+                <h5>Solo Traveler <span>NGN 879,999</span></h5>
+                <h5>Couple <span>NGN 1,200,000</span></h5><br>
+                <p>- Tourist entry permit</p>
+                <p>- Return airport pick-up</p>
+                <p>- 7 days in 3 stars hotel</p>
+                <p>- Daily breakfast</p>
+                <p>- North Island Tour</p>
+                <p>- South Island Tour</p>
+                <p>- Not include flight, start from N1.4m</p>
+                <center><button>Book Now</button></center>
+            </div>
+            <div class="package1">
+                <h3>Vacation in Seychelles</h3>
+                <img src="/img/berjaya-beach-resort-pool.jpg" alt="" width="100%">
+                <h5>Solo Traveler <span>NGN 1,199,999</span></h5>
+                <h5>2 persons <span>NGN 1,349,999</span></h5><br>
+                <p>- Tourist entry permit</p>
+                <p>- Return airport pick-up</p>
+                <p>- 6 nights 7 days in beach resort</p>
+                <p>- Daily breakfast</p>
+                <p>- Not include flight, start from N1.1m</p>
+                <center><button>Book Now</button></center>
+            </div>
+            <div class="package1">
+                <h3>Romantic Maldives</h3>
+                <img src="/img/maldives.jpg" alt="" width="100%">
+                <h5>Solo Traveler <span>NGN 879,999</span></h5>
+                <h5>Couple <span>NGN 1,200,000</span></h5><br>
+                <p>- Tourist entry permit</p>
+                <p>- Return airport pick-up</p>
+                <p>- 6 nights 7 days in a beach hotel</p>
+                <p>- Daily breakfast</p>
+                <p>- Not include flight, start from N2.2m</p>
+                <center><button>Book Now</button></center>
+            </div>
+        </div>
+
+        <div class="tour-parent1 column">
+            <div class="package1">
+                <h3>Vacation in Mombasa</h3>
+                <img src="/img/pexels-keeganjchecks-30165022.jpg" alt="" width="100%">
+                <h5>Solo Traveler <span>NGN 1,490,000</span></h5>
+                <h5>Couple <span>NGN 1,800,000</span></h5><br>
+                <p>- Tourist entry permit</p>
+                <p>- Return airport pick-up</p>
+                <p>- 7 days accommodationat at a resort</p>
+                <p>- Daily breakfast</p>
+                <p>- Mombasa city tour</p>
+                <p>- Not include flight, start from N1.5m</p>
+                <center><button>Book Now</button></center>
+            </div>
+            <div class="package1">
+                <h3>Vacation in Zanzibar</h3>
+                <img src="/img/pexels-royal-wave-ent-781256594-20693411.jpg" alt="" width="100%">
+                <h5>Solo Traveler <span>NGN 1,520,999</span></h5>
+                <h5>2 persons <span>NGN 1,995,000</span></h5><br>
+                <p>- Tourist entry permit</p>
+                <p>- Return airport pick-up</p>
+                <p>- 7 days accommodation at a beach hotel</p>
+                <p>- Daily breakfast</p>
+                <p>- City and shopping tour</p>
+                <p>- Not include flight, start from N1.5m</p>
+                <center><button>Book Now</button></center>
+            </div>
+            <div class="package1">
+                <h3>Best of Mauritus</h3>
+                <img src="/img/mauritus.jpg" alt="" width="100%">
+                <h5>Solo Traveler <span>NGN 1,499,999</span></h5>
+                <h5>Couple <span>NGN 2,600,000</span></h5><br>
+                <p>- Tourist entry permit</p>
+                <p>- Return airport pick-up</p>
+                <p>- 7 days in 3 stars hotel</p>
+                <p>- Daily breakfast</p>
+                <p>- North Island Tour</p>
+                <p>- South Island Tour</p>
+                <p>- Not include flight, start from N2.2m</p>
+                <center><button>Book Now</button></center>
+            </div>
+        </div>
+
+
+        <div class="tour-parent1 column">
+            <div class="package1">
+                <h3>Best of Singapore City</h3>
+                <img src="/img/singapore.jpg" alt="" width="100%">
+                <h5>Solo Traveler <span>NGN 1,600,000</span></h5>
+                <h5>P.Sharing <span>NGN 1,449,999</span></h5><br>
+                <p>- Return airport pick-up</p>
+                <p>- 5 nights in 3 star hotel</p>
+                <p>- Daily breakfast</p>
+                <p>- Singapore city tour</p>
+                <p>- Santosa Island tour</p>
+                <p>- And entertainment etc.</p>
+                <p>- Not include flight, start from N2.8m</p>
+                <center><button>Book Now</button></center>
+            </div>
+            <div class="package1">
+                <h3>Vienna, Austria City Break</h3>
+                <img src="/img/austria.jpg" alt="" width="100%">
+                <h5>Solo Traveler <span>NGN 0.00</span></h5>
+                <h5>2 persons <span>NGN 0.00</span></h5><br>
+                <p>Coming Soon!!!</p>
+                <center><button>Book Now</button></center>
+            </div>
+            <div class="package1">
+                <h3>Minsk, Belarus City Break</h3>
+                <img src="/img/belerus.jpg" alt="" width="100%">
+                <h5>Solo Traveler <span>NGN 0.00</span></h5>
+                <h5>Couple <span>NGN 0.00</span></h5><br>
+                <p>- Coming Soon!!!</p>
+                <center><button>Book Now</button></center>
+            </div>
         </div>
     </div>
 
-    <div class="con-container">
-        <h1 class="service">Our Services</h1>
-        <div class="parent3 column">
-            <div class="col-3">
-                <img class="img" src="/img/google-flights-1.jpeg" alt="flight" width="75%">
-                <h2>Airline Flight Ticket</h2>
-                <p class="our-services">We offer affordable flight booking and ticket to many cities in all countries across the globe and in all categories; one-way ticket, return ticket, multiple cities flight ticket, SOTO ticket, and marine fare.</p>
-                <button class="btn3">Book Now</button>
-            </div>
-            <div class="col-3">
-                <img class="img" src="/img/eko-gardens.jpg" alt="flight" width="80%">
-                <h2>Hotel Bookings</h2>
-                <p class="our-services">When it comes to booking the perfect hotel, vacation rental, resort, apartment, guest house, we have got you covered. With hundreds of thousands of properties in over 200 countries and territories, we provide incomparable choice with best deal and price guarantee.</p>
-                <button class="btn3">Book Now</button>
-            </div>
-            <div class="col-3">
-                <img class="img" src="/img/tour-guide-rules.jpg" alt="flight" width="80%">
-                <h2>Tour Guide</h2>
-                <p class="our-services">We are passionate about travel. Every day we inspire and reach many travelers for honeymoon, leisure, vacation, group tour and hangout. We designs ready-made packages and tailor-made package on request that will exceed your expectations.</p>
-                <button class="btn3">Book Now</button>
-            </div>
-        </div>
-
-
-
-        <div class="parent3 column">
-            <div class="col-3">
-                <img class="img" src="/img/International-Education-Study-Consult-Ltd-Visa-Assistance-2.jpg" alt="flight" width="80%">
-                <h2>Visa Assistance</h2>
-                <p class="our-services">As one of our popular services, no matter what type of travel you need to plan, rest assured that we will provide all the resource and guidance you need for perfect visa arrangement in order to get authentic approved visa. We also offer 48 hours Dubai visa. (UAE visa)</p>
-                <button class="btn3">Book Now</button>
-            </div>
-            <div class="col-3">
-                <img class="img" src="/img/car-hire.jpg" alt="flight" width="80%">
-                <h2>Car Hire</h2>
-                <p class="our-services">Whether you're going on a wedding ceremony or any kinds of occasion, city break or a beach holiday, hiring a car from Allicom travels will add a sense of adventure to your trip.
-
-                    Get in touch with us today for study abroad proper arrangement.</p>
-                    <button class="btn3">Book Now</button>
-            </div>
-            <div class="col-3">
-                <img class="img" src="/img/smiling-black-man-holding-laptop-and-flag-of-uk-1024x682.jpg" alt="flight" width="80%">
-                <h2>Study Abroad</h2>
-                <p class="our-services">Let handling your foreign educational program is one of our area of expert. Everything in one package; advisory, searching school, admission, visa documentation, accommodation and travel arrangement to school door step</p>
-                <button class="btn3">Book Now</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="con-parent">
-            
-            <div class="parent4">
-                <div class="col-3"></div>
-                <div class="col-3"></div>
-            </div>
-        </div>
-    </div>
 
     <div class="container">
         <h1 class="con-head">Contact Us</h1>
@@ -243,6 +254,7 @@
             </div>
         </div>
     </div>
+   </div>
 
     <div class="container">
         <div class="footer">
@@ -274,34 +286,10 @@
             </div>
         </div>
     </div>
+
+
+
+
     
 </body>
 </html>
-
-
-
-<!-- <div class="header">
-            <div class="col-3 cont">
-                <div class="phone">
-                    <h4>08067663986, <span>08071729330</span></h4>
-                </div>
-                <div class="email">
-                   <h4> hello@allicomtravels.com</h4>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="socials">
-                        <img class="facebook" src="/img/facebook (1).png" alt="facebook" width="5%">
-                    
-                        <img class="facebook" src="/img/twitter (1).png" alt="facebook" width="5%">
-                    
-                        <img class="facebook" src="/img/instagram (1).png" alt="facebook" width="5%">
-
-                        <img class="facebook" src="/img/social.png" alt="facebook" width="5%">
-
-                        <img class="facebook" src="/img/social (1).png" alt="facebook" width="5%">
-                
-                    
-                </div>
-            </div>
-        </div> -->
