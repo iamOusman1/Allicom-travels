@@ -91,7 +91,7 @@ function searchTourism() {
         resultList.innerHTML = "";
 
         if(!data.results || data.results.length === 0) {
-            resultList.innerHTML = "<li>No tours available for this date<li>";
+            resultList.innerHTML = `<li class="noTours">No tours available for this date<li>`;
             return;
         }
 
