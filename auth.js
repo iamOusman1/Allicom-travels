@@ -41,13 +41,33 @@ const apiBaseUrl = "https://api.allicomtravels.com/auth";
         method: "POST",
         body: formData
     })
+
+    const responseText = await response.text()
+    console.log("Response Text:", responseText)
+
+    let data;
+    try {
+        data= JSON.parse(responseText);
+    }catch (jsonError) {
+        console.error("Error parsing JSON:", jsonError);
+        alert("unexpected error occurred");
+        return;
+    }
     
     if (!response.ok) {
+        if (data.email) {
+            alert(`Error: ${data.email}`)
+        } else {
+            alert(`Error: ${data.message || "An error occurred"}`)
+        }
         throw new Error(`HTTP Error! status: ${response.status}`)
     }
-    const data = await response.json();
-    console.log("API Response:", data)
+    // const data = await response.json();
+        console.log("API Response:", data)
         alert(data.message || "Sign-up Successful")
+
+        window.location.href = "login.html";
+
    
     
 } catch(error) {

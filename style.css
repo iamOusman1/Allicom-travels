@@ -948,6 +948,7 @@ textarea {
     }
     .row1{
         display: block;
+        flex-direction: column-reverse;
     }
     .column {
         flex-direction: column;
