@@ -44,12 +44,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Handle image preview
-  imageInput.addEventListener("change", () => {
-    imageInput.setAttribute("multiple", "true");
-    imageInput.setAttribute("accept", "image/*");
-    imageInput.setAttribute("accept", "image/*");
+  document.querySelectorAll(".tour-file").forEach((input) => {
+  input.addEventListener("change", () => {
     previewImages.innerHTML = "";
-    Array.from(imageInput.files).forEach((file) => {
+
+    document.querySelectorAll(".tour-file").forEach((inputField) => {
+    Array.from(inputField.files).forEach((file) => {
       const reader = new FileReader();
       reader.onload = (e) => {
         const img = document.createElement("img");
@@ -62,6 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     validateForm();
   });
+})
+})
 
   form.addEventListener("input", validateForm);
 

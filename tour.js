@@ -37,7 +37,7 @@
 //         });
 
 //     } catch (error) {
-//         console.error("Error fetching tourism site:", error)
+//         console.error("Error fetching tourism site:", error) // <div class="image-gallery">${imageHtml}</div>
 //     }
 // }
 
@@ -55,9 +55,7 @@ hamburger.addEventListener("click", e => {
 
 
 function searchTourism() {
-
-    // const city = document.getElementById("city").value;
-    // const country = document.getElementById("city").value;
+    
     const searchInput = document.getElementById("searchInput").value.trim();
     const dateInput = document.getElementById("date").value
     
@@ -69,7 +67,22 @@ function searchTourism() {
     // convert date to days of week
     const daysOfWeek = new Date(dateInput).toLocaleString('en-US', {weekday: 'long'});
 
-    const apiUrl = `https://api.allicomtravels.com/tour/get-available-tourism-site/?city=${encodeURIComponent(searchInput)}&country=${encodeURIComponent(searchInput)}&day_of_week=${encodeURIComponent(daysOfWeek)}`;
+    let city = "";
+    let country = "";
+
+    if (searchInput.includes(",")) {
+        const parts = searchInput.split(",").map(part => part.trim());
+        city = parts[0] ;
+        country = parts[1];
+    } else {
+        city = searchInput;
+        country = getCountryByCity(city)
+    }
+
+
+    // console.log("Fetching:", apiUrl)
+
+    const apiUrl = `https://api.allicomtravels.com/tour/get-available-tourism-site/?city=${encodeURIComponent(city)}&country=${encodeURIComponent(country)}&day_of_week=${encodeURIComponent(daysOfWeek)}`;
 
     fetch( apiUrl, {
         method: 'GET',
@@ -104,22 +117,44 @@ function searchTourism() {
             console.log("Tourism Details:", data)
         }
 
+        if (!document.querySelector(".tour-header")) {
+            const header = document.createElement("h1")
+            header.textContent = "Available Tours";
+            header.classList.add("tour-header")
+            resultList.appendChild(header)
+        }
+
          // display the available tourism site
-        data.results.forEach(tour => {
+        data.results.forEach((tour, index )=> { 
         const resultDiv = document.createElement('div');
-        resultDiv.classList.add("tour-result")
+        resultDiv.classList.add("tour-result");
+
+        tourImages[index] = tour.images.map(img => img.image);
+        let firstImage = tourImages[index].length > 0 ? tourImages[index][0] : "";
+
+        // add image to image gallery
+        let imageGallery = tourImages[index].length > 0
+            ? `
+            <div class="image-gallery">
+                <button class="prev-btn" onclick="changeImage(${index}, -1)">&#10094;</button>
+                <img src="${firstImage}" id="image-${index}" alt="Tour Image" class="tour-image">
+                <button class="next-btn" onclick="changeImage(${index}, 1)">&#10095;</button>
+            </div>
+            `
+            : `<p>No images available`;
+
 
         resultDiv.innerHTML = `
-            <h1>Available Tour</h1>
+            
+            ${imageGallery}
             <p><strong>City:</strong> ${tour.city}</p>
             <p><strong>Country:</strong> ${tour.country}</p>
-            <p><strong>Description:</strong> ${tour.description}</p>
+            <p><strong>Price:</strong>NGN ${tour.price}</p>
             <p><strong>Duration:</strong> ${tour.duration} hours</p>
-            <p><strong>Price:</strong> ${tour.price}</p>
-            <p><strong>Age Range:</strong> ${tour.age_range}</p>
+            <p><strong>Description:</strong> ${tour.description}</p>
+            <p><strong>Age Range:</strong> ${tour.age_limit}</p>
             <p><strong>Available days:</strong> ${tour.availability_days.map(day => day.day_of_week).join(", ")}</p>
-            <p>Images</p>
-            ${tour.images && tour.images.length > 0 ? `<img src="${tour.images[0].image}" alt="Tour Image" style="width: 50%; height: auto">` : ""}
+           <center><button class="book-now">Book Now</button></center>
             
         `
     console.log("Tour images", tour.images)
@@ -139,3 +174,40 @@ function searchTourism() {
 document.getElementById('searchTour').addEventListener('click', function () {
     document.getElementById('noDisplay').style.display = "none";
    })
+
+
+   function getCountryByCity(city) {
+    const cityToCountry =  {
+        "Lagos": "Nigeria",
+        "Abuja": "Nigeria",
+        "Accra": "Ghana",
+        "Mombasa": "Kenya",
+        "Nairobi": "Kenya",
+        "Lagos": "Nigeria",
+        "Kigali": "Rwanda",
+        "Nairobi": "Kenya",
+        "Dar Salam": "Tanzani",
+        "Zanzibar": "Tanzania"
+    }
+
+    return cityToCountry[city] || "";
+   }
+
+//    store image for each tour
+let tourImages = {};
+
+// function to change image in gallery
+function changeImage(tourIndex, direction) {
+    const imgElement = document.getElementById(`image-${tourIndex}`);
+    const images = tourImages[tourIndex];
+
+    if(!imgElement || !images || images.length === 0) return;
+
+    let currentIndex = images.indexOf(imgElement.src);
+    let newIndex = currentIndex + direction;
+
+    if(newIndex < 0) newIndex = images.length - 1
+    if(newIndex >= images.length) newIndex = 0
+
+    imgElement.src = images[newIndex];
+}

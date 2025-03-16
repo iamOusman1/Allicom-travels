@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Upload Tour</title>
     <link rel="stylesheet" href="style.css">
     <script src="/file.js" defer></script>
+    <link rel="shortcut icon" href="/img/Allicomtravels_logo.jpeg" type="image/x-icon">
 </head>
 <body>
 
@@ -94,7 +95,7 @@
         <input id="title" class="tour-inp2" type="text" name="title">
         <p>Tour Description:</p>
         <textarea id="desc" class="tour-area"></textarea>
-        <p>Duration of Tour:</p>
+        <p>Duration of Tour (in hours):</p>
         <input id="duration" class="tour-inp2" type="number" name="duration">
         <p>Price:</p>
         <input id="price" class="tour-inp2" type="number" name="price">
@@ -115,7 +116,12 @@
         
 
         <p>Images (Max 4)</p>
-        <input id="selectedImage" class="tour-file" type="file">
+        <input id="selectedImage" class="tour-file" type="file" multiple accept="image/*"><br>
+        <input id="selectedImage" class="tour-file" type="file" multiple accept="image/*"><br>
+        <input id="selectedImage" class="tour-file" type="file" multiple accept="image/*"><br>
+        <input id="selectedImage" class="tour-file" type="file" multiple accept="image/*"><br>
+
+
         <div><button class="preview-btn">Preview</button></div>
         <button class="submitBtn" id="submitBtn" type="submit" disabled>Submit</button>
     </form>
@@ -135,10 +141,48 @@
         <p>Age Range: <span id="preview-ageLimit">
         <p>Duration: <span id="preview-duration"></span></p>
         <p>Available Days: <span id="preview-available-days"></span></p>
-        <p>Selected Images: <span id="preview-images"></span></p>
+        <p>Selected Images: <span class="preview-img" id="preview-images"></span></p>
         
      </div>
 </div>
+
+
+
+<!-- FOOTER -->
+
+<div class="container">
+    <div class="footer">
+        <div class="download-parent column">
+            <div class="col-3 linksss">
+                <h2 >Quick Links</h2>
+                
+                         <!-- <li class="links">Travels Update</li> -->
+                    <li class="links"><a href="">Visa Assitance</a></li>
+                    <li class="links"><a href="">Tour Packages</a></li>
+                    <!-- <li class="links">Study Abroads</li> -->
+                    <!-- <li class="links">Insurance Services</li> -->
+                    <!-- <li class="links">hajj & Umrah</li> -->
+                    <li class="links"><a href="https://www.allicomtravels.com/about/">About Us</a></li>
+                    <li class="links"><a href="/login.html">Partner Sign-in</a></li>
+            </div>
+            <div class="col-3 linksss2">
+                <h2 class="link-head">Get In Touch</h2>
+                <p class="links">08067663986,
+                    08071729330</p>
+                 <p class="links">hello@allicomtravel.com</p>
+                 <p class="links"> 61 Okesuna Street, Lagos Island, 102273, Lagos, Nigeria</p>
+                
+                    <img class="facebook" src="/img/facebook (1).png" alt="" width="5%">
+                    <img class="facebook" src="/img/instagram (1).png" alt="" width="5%">
+                    <img class="facebook" src="/img/twitter (1).png" alt="" width="5%">
+                    <img class="facebook" src="/img/social.png" alt="" width="5%">
+                
+            </div>
+            
+        </div>
+    </div>
+</div>
+</div>   
 
     
 </body>
