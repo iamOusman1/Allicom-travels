@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Booking</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/bookingtour.js" defer></script>
+</head>
+<body>
+
+    <div class="header">
+        <div class="col-3 cont">
+            <div class="phone">
+                <h4>08067663986, <span>08071729330</span></h4>
+            </div>
+            <div class="email">
+               <h4> hello@allicomtravels.com</h4>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="socials">
+                    <img class="facebook" src="/img/facebook (1).png" alt="facebook" width="5%">
+                
+                    <img class="facebook" src="/img/twitter (1).png" alt="facebook" width="5%">
+                
+                    <img class="facebook" src="/img/instagram (1).png" alt="facebook" width="5%">
+
+                    <img class="facebook" src="/img/social.png" alt="facebook" width="5%">
+
+                    <img class="facebook" src="/img/social (1).png" alt="facebook" width="5%">
+            
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="parent-header">
+                    <div class="col-3">
+                        <div class="logo">
+                            <img class="logo1" src="/img/Allicomtravels_logo.jpeg" alt="logo" width="10%">
+                        <span class="allicom">Allicom Tourism</span>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="menu">
+                            <ul class="nav-links">
+                                <li><a href="#">HOME</a></li>
+                                <!-- <li><a href="#">VISA ASSISTANCE</a></li>
+                                <li><a href="#">STUDY ABROAD</a></li> -->
+                                <li><a href="#">SERVICES</a></li>
+                                <li><a href="#">CONTACT US</a></li>
+                                <!-- <li><a href="/signup.html">SIGN UP</a></li> -->
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    <!-- nav bar -->
+                    <img class="sidebar-menu" id="hamburger" src="/img/menu.png" alt="nav-toggle" width="10%" >
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+        </div>
+    </div>
+
+
+    <div class="booking-tour">
+        <form id="bookingForm" class="booking-form">
+            <p>Email:</p>
+            <input id="email" class="tour-inp2" type="email" placeholder="Email" name="email">
+            <!-- <p>Tourism site (0 or 1):</p>
+            <input id="tourism-site" class="tour-inp2" type="number" placeholder="Tourism site (0 or 1)" name="tourism-site"> -->
+            <p for="tourism-site">Tourism Site:</p>
+            <select class="tour-inp2" id="tourism-site" name="tourism-site">
+                <option disabled selected> Select a tourism site</option>
+            </select>
+            <p>Sex:</p>
+            <input id="sex" class="tour-inp2" type="text" placeholder="Sex" name="sex">
+            <p>First Name:</p>
+            <input id="first-name" class="tour-inp2" type="text" placeholder="First Name" name="first-name">
+            <p>Last Name:</p>
+            <input id="last-name" class="tour-inp2" type="text" placeholder="Last Name" name="last-name">
+            <p>Middle Name:</p>
+            <input id="middle-name" class="tour-inp2" type="text" placeholder="Middle Name" name="middle-name">
+            <p>Passport Expiration Date:</p>
+            <input id="passport-exp-date" class="tour-inp2" type="date" placeholder="Middle Name" name="passport-exp-date">
+            <div id="iamgeContainer">
+                <p>Passport Image:</p>
+                <input id="passport-img" class="tour-inp2" type="file" placeholder="" name="passport-img">
+            </div>
+            <p>Passport Number:</p>
+            <input id="passport-number" class="tour-inp2" type="number" placeholder="Passport Number" name="passport-number">
+            <p>Phone Number:</p>
+            <input id="phone-number" class="tour-inp2" type="tel" placeholder="Phone Number" name="phone-number">
+            <button id="submit-btn">Submit</button>
+        </form>
+    </div>
+    
+    
+</body>
+</html>

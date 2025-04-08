@@ -103,6 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const formData = new FormData();
     formData.append("city", document.getElementById("city").value);
     formData.append("country", document.getElementById("country").value);
+    formData.append("title", document.getElementById("title").value);
     formData.append("description", document.getElementById("desc").value);
     formData.append("duration", document.getElementById("duration").value);
     formData.append("price", document.getElementById("price").value);
@@ -119,9 +120,17 @@ document.addEventListener("DOMContentLoaded", () => {
     formData.append("available_days", JSON.stringify(availableDays));
 
     // Handle Image Uploads
-    Array.from(imageInput.files).forEach((file) => {
-      formData.append("uploaded_images", file);
-    });
+
+    imageInput.addEventListener("change", () => {
+      console.log("Total images selected:", imageInput.files.length);
+
+      Array.from(imageInput.files).forEach((file, index) => {
+        console.log(`Image ${index + 1}: ${file.name}`)
+      });
+    })
+    formData.append("uploaded_images", file);
+
+  
 
     try {
       const response = await fetch(apiUrl, {

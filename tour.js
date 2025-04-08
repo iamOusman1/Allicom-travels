@@ -58,6 +58,7 @@ function searchTourism() {
     
     const searchInput = document.getElementById("searchInput").value.trim();
     const dateInput = document.getElementById("date").value
+
     
     if (!searchInput || !dateInput) {
         alert("Please fill all details")
@@ -81,6 +82,8 @@ function searchTourism() {
 
 
     // console.log("Fetching:", apiUrl)
+    document.getElementById("loaderOverlay").style.display = "flex"
+
 
     const apiUrl = `https://api.allicomtravels.com/tour/get-available-tourism-site/?city=${encodeURIComponent(city)}&country=${encodeURIComponent(country)}&day_of_week=${encodeURIComponent(daysOfWeek)}`;
 
@@ -102,6 +105,9 @@ function searchTourism() {
 
         const resultList = document.getElementById("results")
         resultList.innerHTML = "";
+
+         document.getElementById("loaderOverlay").style.display = "none"
+
 
         if(!data.results || data.results.length === 0) {
             resultList.innerHTML = `<li class="noTours">No tours available for this date<li>`;
@@ -130,6 +136,9 @@ function searchTourism() {
         resultDiv.classList.add("tour-result");
 
         tourImages[index] = tour.images.map(img => img.image);
+        console.log(`Tour ${index} images:`, tourImages[index])
+
+        // get first image for the gallery
         let firstImage = tourImages[index].length > 0 ? tourImages[index][0] : "";
 
         // add image to image gallery
@@ -149,6 +158,7 @@ function searchTourism() {
             ${imageGallery}
             <p><strong>City:</strong> ${tour.city}</p>
             <p><strong>Country:</strong> ${tour.country}</p>
+            <p><strong>Title:</strong> ${tour.title}</p>
             <p><strong>Price:</strong>NGN ${tour.price}</p>
             <p><strong>Duration:</strong> ${tour.duration} hours</p>
             <p><strong>Description:</strong> ${tour.description}</p>
@@ -168,6 +178,8 @@ function searchTourism() {
     .catch(error => {
         console.error("Error fetching tourism details:", error);
         alert("Failed to fetch data. Please try again.")
+        document.getElementById("loaderOverlay").style.display = "none"
+
     })
 }
 
@@ -183,11 +195,19 @@ document.getElementById('searchTour').addEventListener('click', function () {
         "Accra": "Ghana",
         "Mombasa": "Kenya",
         "Nairobi": "Kenya",
-        "Lagos": "Nigeria",
         "Kigali": "Rwanda",
         "Nairobi": "Kenya",
         "Dar Salam": "Tanzani",
-        "Zanzibar": "Tanzania"
+        "Zanzibar": "Tanzania",
+        "Seychelles": "Africa",
+        "Mauldive": "Africa",
+        "Uganda": "Africa",
+        "Mauritius": "Africa",
+        "Morocco": "Africa",
+        "Namibia": "Africa",
+        "South Africa": "Africa",
+        "Morocco": "Africa",
+        "Gambia": "Africa"
     }
 
     return cityToCountry[city] || "";
@@ -203,11 +223,23 @@ function changeImage(tourIndex, direction) {
 
     if(!imgElement || !images || images.length === 0) return;
 
-    let currentIndex = images.indexOf(imgElement.src);
-    let newIndex = currentIndex + direction;
+    let currentImageUrl = imgElement.src
+    // currentImageUrl = currentImageUrl.split("? ")[0];
+    console.log("Current image url:", currentImageUrl)
+    console.log("Available image:", images)
 
-    if(newIndex < 0) newIndex = images.length - 1
-    if(newIndex >= images.length) newIndex = 0
+    let currentIndex = images.findIndex(imgUrl => imgUrl === currentImageUrl);
+
+
+    if(currentIndex === -1) currentIndex = 0;
+
+    let newIndex = (currentIndex + direction + images.length) % images.length;
+
+    // let newIndex = currentIndex + direction;
+
+    // if(newIndex < 0) newIndex = images.length - 1
+    // if(newIndex >= images.length) newIndex = 0
 
     imgElement.src = images[newIndex];
+    console.log(`Tour ${tourIndex}: Switched to image ${newIndex}: ${imgElement.src}`)
 }
