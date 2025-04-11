@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Validate form fields before submission
   function validateForm() {
     let isValid = true;
-    const fields = ["city", "country", "desc", "duration", "price", "ageLimit"];
+    const fields = ["city", "country", "title", "desc", "duration", "price", "ageLimit"];
     fields.forEach((field) => {
       const input = document.getElementById(field);
       if (!input.value.trim()) {
@@ -128,7 +128,10 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(`Image ${index + 1}: ${file.name}`)
       });
     })
-    formData.append("uploaded_images", file);
+    Array.from(imageInput.files).forEach((file) => {
+      formData.append("uploaded_images", file);
+    })
+    
 
   
 

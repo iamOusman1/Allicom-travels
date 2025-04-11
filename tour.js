@@ -53,6 +53,26 @@ hamburger.addEventListener("click", e => {
 })
 
 
+// IMAGE GALLERY SECTION
+document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('.slide');
+    let currentIndex = 0;
+
+    function showImage(index) {
+        images.forEach(img => img.classList.remove('active'));
+        images[index].classList.add('active');
+    }
+
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+    }
+
+    // Set interval for automatic sliding , Change image every 5 seconds
+    setInterval(nextImage, 5000);
+});
+// END
+
 
 function searchTourism() {
     
@@ -156,9 +176,9 @@ function searchTourism() {
         resultDiv.innerHTML = `
             
             ${imageGallery}
+            <p><strong>Title:</strong> ${tour.title}</p>
             <p><strong>City:</strong> ${tour.city}</p>
             <p><strong>Country:</strong> ${tour.country}</p>
-            <p><strong>Title:</strong> ${tour.title}</p>
             <p><strong>Price:</strong>NGN ${tour.price}</p>
             <p><strong>Duration:</strong> ${tour.duration} hours</p>
             <p><strong>Description:</strong> ${tour.description}</p>
@@ -178,6 +198,8 @@ function searchTourism() {
     .catch(error => {
         console.error("Error fetching tourism details:", error);
         alert("Failed to fetch data. Please try again.")
+        location.reload()
+
         document.getElementById("loaderOverlay").style.display = "none"
 
     })

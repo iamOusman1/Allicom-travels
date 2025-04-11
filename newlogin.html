@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Partner Login</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="/img/Allicomtravels_logo.jpeg" type="image/x-icon">
     <!-- <script src="/script.js" defer></script> -->
@@ -11,13 +11,11 @@
 </head>
 <body>
 
+<header>
     <div class="header">
             <div class="col-3 cont">
-                <div class="phone">
-                    <h4>08067663986, <span>08071729330</span></h4>
-                </div>
-                <div class="email">
-                   <h4> hello@allicomtravels.com</h4>
+                <div>
+                    <h4>08067663986, 08071729330</h4>
                 </div>
             </div>
             <div class="col-3">
@@ -43,8 +41,10 @@
         <div class="parent-header">
                     <div class="col-3">
                         <div class="logo">
-                            <img class="logo1" src="/img/Allicomtravels_logo.jpeg" alt="logo" width="10%">
-                        <span class="allicom">Allicom Tourism</span>
+                            <img class="logo1" src="/img/Allicomtravels_logo.jpeg" alt="logo" width="7%">
+                        <span class="allicom">Allicom Tourism
+                        <br><p style="font-size:12px;">Explore Nigeria! Explore Africa!!</P>
+                        </span>
                         </div>
                     </div>
                     <div class="col-3">
@@ -69,6 +69,7 @@
                     </div>
         </div>
     </div>
+</header>
 
 
 
@@ -79,9 +80,9 @@
             <div class="signup-border" >
                 <form id="loginForm" onsubmit="loginUser(event)">
                     <h1 class="lo-par">Login</h1>
-                    <h5>Username</h5>
+                    <label>Username</label><br>
                     <input class="inp" id="loginEmail" type="email" name="email" placeholder="Enter your Email" required><br><br>
-                    <h5>Password</h5>
+                    <label>Password</label><br>
                     <input class="inp" id="loginPassword" type="password" name="password" placeholder="Enter your Password" required>
                     <a href="#"><p class=" fp">Forget Password?</p></a><br>
 
@@ -96,34 +97,27 @@
         <div class="footer">
             <div class="download-parent column">
                 <div class="col-3 linksss">
-                    <h2 >Quick Links</h2>
-                     <!-- <li class="links">Travels Update</li> -->
-                     <li class="links"><a href="">Visa Assitance</a></li>
-                     <li class="links"><a href="">Tour Packages</a></li>
-                     <!-- <li class="links">Study Abroads</li> -->
-                     <!-- <li class="links">Insurance Services</li> -->
-                     <!-- <li class="links">hajj & Umrah</li> -->
-                     <li class="links"><a href="https://www.allicomtravels.com/about/">About Us</a></li>
-                     <li class="links"><a href="/login.html">Partner Sign-in</a></li>
+                    <p style="font-weight: 700; padding-top: 20px; font-size: 18px;">Quick Links</p>
+                    <li style="font-size: 15px;"><a href="https://www.allicomtravels.com/evisa">e-Visa</a></li>
+                    <li style="font-size: 15px;"><a href="https://allicomtravels.com/visa/">Visa Assistance</a></li>
+                    <li style="font-size: 15px;"><a href="https://allicomtravels.com/tour">Hots Selling Packages</a></li>
+                    <li style="font-size: 15px;"><a href="https://www.allicomtravels.com/about/">About Us</a></li>
+                    <li style="font-size: 15px;"><a href="/login.html">Partner Sign-in</a></li>
                 </div>
                 <div class="col-3 linksss2">
-                    <h2 class="link-head">Get In Touch</h2>
-                    <p class="links">08067663986,
-                        08071729330</p>
-                     <p class="links">hello@allicomtravel.com</p>
-                     <p class="links"> 61 Okesuna Street, Lagos Island, 102273, Lagos, Nigeria</p>
+                    <p style="font-weight: 700; padding-top: 20px; font-size: 18px;">Get In Touch</p>
+                    <p>+2348067663986,+2348071729330</p>
+                     <p>hello@allicomtravel.com</p>
+                     <p> 61 Okesuna Street, Lagos Island, 102273, Lagos, Nigeria</p>
                     
                         <img class="facebook" src="/img/facebook (1).png" alt="" width="5%">
                         <img class="facebook" src="/img/instagram (1).png" alt="" width="5%">
                         <img class="facebook" src="/img/twitter (1).png" alt="" width="5%">
                         <img class="facebook" src="/img/social.png" alt="" width="5%">
-                    
                 </div>
-                
             </div>
         </div>
-    </div>
-</div>   
+    </div>  
 
 <script src="/loginn.js" defer></script>
 

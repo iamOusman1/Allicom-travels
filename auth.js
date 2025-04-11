@@ -124,30 +124,4 @@ function validateConfirmPassword() {
     }
 }
 
-// userData("John doe", "johndoe@example.com", "password123")
 
-
-// LOGIN FUNCTION
-// document.getElementById("loginForm").addEventListener("submit", function(event) {
-//     event.preventDefault();
-//     console.log (loginForm)
-
-//     const email = document.getElementById("loginEmail").value;
-//     const password = document.getElementById("loginPassword").value;
-
-//     fetch(`${apiBaseUrl}/login-supplier/`, {
-//         method: "POST",
-//         headers: {"Content-Type": "application/json"},
-//         body: JSON.stringify({email, password})
-//     })
-//     .then(reponse => Response.json())
-//     .then(data => {
-//        if(data.token) {
-//         localStorage.setItem("authToken", data.token);
-//         alert("Login Successful");
-//        } else {
-//         alert("Login Failed");
-//        }
-//     })
-//     .catch(error => console.error("Error:", error))
-// })
