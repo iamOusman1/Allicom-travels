@@ -1,3 +1,79 @@
+const urlParams = new URLSearchParams(window.location.search);
+const tourId = urlParams.get("id");
+console.log("Tour ID from url:", tourId)
+
+const tourDetails = document.getElementById("tourDetails")
+
+
+        // Check if we have results
+        if (!tourId) {
+            console.error("No tour ID found in url")
+            tourDetails.innerHTML = "<p>No tour selected</p>"
+        } else {
+            fetch(`https://api.allicomtravels.com/tour/tourism-site/${tourId}/`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`)
+                }
+                return response.json()
+            })
+            .then(tour => {
+                console.log("Tour Details:", tour)
+
+                tourDetails.innerHTML =` 
+                <p><strong>Title:</strong> ${tour.title}</p>
+                <p><strong>City:</strong> ${tour.city}</p>
+                <p><strong>Country:</strong> ${tour.country}</p>
+                <p><strong>Description:</strong> ${tour.description}</p>
+                <p><strong>Price:</strong> NGN ${tour.price}</p>
+                <p><strong>Age Limit:</strong> ${tour.age_limit}</p>
+                <p><strong>Duration:</strong> ${tour.duration} hours</p>
+                <p><strong>Available Days:</strong> ${tour.availability_days.map(day => day.day_of_week).join(', ')}</p>
+
+                <br>
+                <hr>
+                <h2>Price</h2>
+                <p>Adult (s):</p> 
+                <input class="tourDetails-inp" type="number" id="adults" value="1" min="0" /><br>
+                <p>Child (ren):</p>
+                <input class="tourDetails-inp" type="number" id="children" value="0" min="0" /><br>
+
+                <button class="calculate" onclick="calculatePrice(${tour.price})">Calculate Price</button>
+
+                <div id="priceBreakdown" style="margin-top: 10px;"></div>
+            `;
+           
+            })
+            .catch (error => {
+                console.error('Error fetching tour details:', error);
+                tourDetails.innerHTML = "<p>Could not load tour details</p>"
+            })
+        }
+
+
+// Function to calculate price
+function calculatePrice(pricePerPerson) {
+    const adults = parseInt(document.getElementById("adults").value) || 0; 
+    const children = parseInt(document.getElementById("children").value) || 0;
+    
+    const adultPrice = pricePerPerson * adults;
+    const childPrice = pricePerPerson * 0.7 * children
+
+    const subTotal = adultPrice + childPrice
+    const vat = subTotal * 0.075
+    const total = subTotal + vat
+
+    const breakdown = `
+        <p><strong>Sub Total:</strong> NGN ${subTotal.toLocaleString()}</p>
+        <p><strong>Value Added Tax (7.5%):</strong> NGN ${vat.toLocaleString()}</p>
+        <p><strong>Total:</strong> NGN ${total.toLocaleString()}</p>
+    `;
+
+    document.getElementById("priceBreakdown").innerHTML = breakdown;
+}
+
+
+
 document.getElementById('submit-btn').addEventListener('click', async(event) => {
     event.preventDefault()
 
@@ -40,17 +116,6 @@ document.getElementById('submit-btn').addEventListener('click', async(event) => 
     .then(data => {
         console.log('Success:', data);
         alert('Form submitted successfully!');
-
-        // const imageContainer = document.getElementById("imageContainer")
-        // const passpoortImageUrl = booking.passport_image
-
-        // if(passpoortImageUrl) {
-        //     const img = document.createElement("img")
-        //         img.src = passpoortImageUrl;
-        //         img.alt = "uploaded passport image"
-        //         img.width = 200
-        //     )
-        // }
     })
     .catch(error => {
         console.log('Error:', error);

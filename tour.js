@@ -1,49 +1,3 @@
-// const API_URL = "https://cors-anywhere.herokuapp.com/https://api.allicomtravels.com/tour/get-available-tourism-site/?city=string&country=string&days-of-week=monday";
-
-// async function getTourismFlight() {
-    
-//     try {
-//         const response = await fetch(API_URL, {
-//             headers: {
-//                 accept: "application/json",
-//             },   
-//         });
-//         if(!response.ok) {
-//             throw new Error("Failed to fetch data");
-//         }
-//         const data = await response.json(); 
-//         const container = document.querySelector(".result");
-
-//         container.innerHTML = ""
-
-//         if(!data.results || data.results.length === 0) {
-//             container.innerHTML = '<p>No tourism site available right now</p>'
-//             return;
-//         }
-
-//         data.results.forEach((site) => {
-//             const card = `
-//                 <div>
-//                     <img src = ${
-//                         site.image || "https://via.placeholder.com/150"
-//                     } alt="image of ${site.city}"
-//                     <h3>${site.city}, ${site.country}</h3>
-//                     <p>${site.description || "No description available."}</p>
-//                     <p>${site.price || "N/A"}</p>
-//                 </div>
-//             `;
-
-//             container.innerHTML += card
-//         });
-
-//     } catch (error) {
-//         console.error("Error fetching tourism site:", error) // <div class="image-gallery">${imageHtml}</div>
-//     }
-// }
-
-// getTourismFlight();
-
-
 // HAMBURGER
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.querySelector(".nav-links");
@@ -100,8 +54,6 @@ function searchTourism() {
         country = getCountryByCity(city)
     }
 
-
-    // console.log("Fetching:", apiUrl)
     document.getElementById("loaderOverlay").style.display = "flex"
 
 
@@ -182,13 +134,11 @@ function searchTourism() {
             <p><strong>Price:</strong>NGN ${tour.price}</p>
             <p><strong>Duration:</strong> ${tour.duration} hours</p>
             <p><strong>Description:</strong> ${tour.description}</p>
-            <p><strong>Age Range:</strong> ${tour.age_limit}</p>
-            <p><strong>Available days:</strong> ${tour.availability_days.map(day => day.day_of_week).join(", ")}</p>
-           <center><button class="book-now">Book Now</button></center>
+            <p><strong>Min Age:</strong> ${tour.age_limit}</p>
+            <p><strong>Available days:</strong> ${tour.availability_days.map(day => day.day_of_week).join(", ")}</p><br>
+           <center><a href="bookingtour.html?id=${tour.id}" class="book-now" '>Book Now</a></center>
             
         `
-    console.log("Tour images", tour.images)
-
         resultList.appendChild(resultDiv)
     });
     

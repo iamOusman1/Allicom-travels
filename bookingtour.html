@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tour Booking</title>
     <link rel="stylesheet" href="style.css">
-    <script src="/bookingtour.js" defer></script>
 </head>
 <body>
 
@@ -13,9 +12,6 @@
         <div class="col-3 cont">
             <div class="phone">
                 <h4>08067663986, <span>08071729330</span></h4>
-            </div>
-            <div class="email">
-               <h4> hello@allicomtravels.com</h4>
             </div>
         </div>
         <div class="col-3">
@@ -68,6 +64,8 @@
         </div>
     </div>
 
+    <div class="tourinfo" id="tourDetails"> </div>
+
 
     <div class="booking-tour">
         <form id="bookingForm" class="booking-form">
@@ -97,10 +95,12 @@
             <input id="passport-number" class="tour-inp2" type="number" placeholder="Passport Number" name="passport-number">
             <p>Phone Number:</p>
             <input id="phone-number" class="tour-inp2" type="tel" placeholder="Phone Number" name="phone-number">
-            <button id="submit-btn">Submit</button>
+            <br>
+            <button class="btn" id="submit-btn">Submit</button>
         </form>
     </div>
     
+    <script src="bookingtour.js" defer></script>
     
 </body>
 </html>

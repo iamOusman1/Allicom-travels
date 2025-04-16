@@ -799,6 +799,13 @@ textarea {
     text-align: center;
     font-size: 25px;
 }
+.tourinfo {
+    border: 1px solid #fff;
+    padding: 20px;
+}
+.tourinfo p {
+    margin-top: 10px;
+} 
 
 
 
@@ -980,6 +987,14 @@ textarea {
     font-size: 18px;
 }
 
+.tourDetails-inp {
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 10px;
+    width: 50%;
+    margin-top: 10px;
+}
+
 .tour-image {
     width: 50%;
     height: auto;
@@ -992,6 +1007,18 @@ textarea {
     background-color: blue;
     margin-top: 20px;
     color: white;
+    cursor: pointer;
+    margin-top: 40px;
+}
+.calculate{
+    padding: 10px 8px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background-color: blue;
+    margin-top: 20px;
+    color: white;
+    cursor: pointer;
+    margin-top: 40px;
 }
 .tour-header {
     text-align: center;
